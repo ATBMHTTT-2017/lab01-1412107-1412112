@@ -1,1 +1,52 @@
-# sample policy 1
+/* connect as SYSDBA */
+
+-- Tao tai khoan cho Giam doc
+create user NV000 identified by 000;
+
+-- Tao tai khoan cho cac Truong chi nhanh
+create user NV101 identified by 101;
+create user NV201 identified by 201;
+create user NV301 identified by 301;
+create user NV401 identified by 401;
+create user NV501 identified by 501;
+
+-- Tao tai khoan cho cac Truong phong
+create user NV102 identified by 102;
+create user NV104 identified by 104;
+create user NV106 identified by 106;
+create user NV202 identified by 202;
+create user NV204 identified by 204;
+create user NV206 identified by 206;
+create user NV302 identified by 302;
+create user NV304 identified by 304;
+create user NV306 identified by 306;
+create user NV402 identified by 402;
+create user NV404 identified by 404;
+create user NV406 identified by 406;
+create user NV502 identified by 502;
+create user NV504 identified by 504;
+create user NV506 identified by 506;
+
+-- Tao tai khoan cho cac Truong du an
+create user NV107 identified by 102;
+create user NV207 identified by 207;
+create user NV307 identified by 307;
+create user NV407 identified by 407;
+create user NV507 identified by 507;
+
+-- Tao tai khoan cho cac Nhan vien thuong
+create user NV103 identified by 103;
+create user NV105 identified by 105;
+create user NV108 identified by 108;
+create user NV203 identified by 203;
+create user NV205 identified by 205;
+create user NV208 identified by 208;
+create user NV303 identified by 303;
+create user NV305 identified by 305;
+create user NV308 identified by 308;
+create user NV403 identified by 403;
+create user NV405 identified by 405;
+create user NV408 identified by 408;
+create user NV503 identified by 503;
+create user NV505 identified by 505;
+create user NV508 identified by 508;
