@@ -28,7 +28,7 @@ create user NV504 identified by 504;
 create user NV506 identified by 506;
 
 -- Tao tai khoan cho cac Truong du an
-create user NV107 identified by 102;
+create user NV107 identified by 107;
 create user NV207 identified by 207;
 create user NV307 identified by 307;
 create user NV407 identified by 407;
