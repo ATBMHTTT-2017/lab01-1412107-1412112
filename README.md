@@ -3,7 +3,7 @@
 **Name of your app** là một bài tập 1 tại môn ATBMHTTT. Bài tập yêu cầu sinh viên tạo cơ sở dữ liệu, phân quyền theo các yêu cầu.
 
 Thành viên:
-* [ ] **MSSV1** Trà Ngô Ngọc Dương (1412112)
+* [x] **1412112** Trà Ngô Ngọc Dương (1412112)
 * [ ] **MSSV2** Tên sinh viên 2 (tên tài khoản github)
 * [ ] **MSSV3** Tên sinh viên 2 (tên tài khoản github)
 
@@ -12,20 +12,20 @@ Thành viên:
 Sinh viên check vào các mục bên dưới và ghi mã sinh viên đã làm vào chức năng theo mẫu. Mục nào ko có MSSV là tính điểm theo nhóm. Cần sắp xếp các chức năng bên dưới theo thứ tự MSSV đã thực hiện.
 
 Yêu cầu **GIT**
-* [✓] Có sử dụng GIT.
-* [✓] Sử dụng GIT theo Centralized Workflow.
+* [x] Có sử dụng GIT.
+* [x] Sử dụng GIT theo Centralized Workflow.
 * [ ] Sử dụng GIT theo Feature Branch Workflow.
 * [ ] Sử dụng GIT theo Gitflow Workflow.
 
 Yêu cầu **bắt buộc**
-* [✓] Viết script tạo cấu trúc cơ sở dữ liệu (**1412112**)
-* [✓] Viết script thêm dữ liệu (**1412112**)
-* [✓] Tạo tài khoản cho các nhân viên trong bảng Nhân Viên. Tên tài khoản trùng với mã nhân viên. Tạo ít nhất 5 tài khoản cho mỗi vị trí: trưởng dự án, trưởng phòng, trưởng chi nhánh, nhân viên, giám đốc và ít nhất 5 dòng cho các bảng dữ liệu còn lại. (**1412112**)
-* [✓] Tạo các role cho các vị trí phù hợp cho công ty. (**1412112**)
-* [✓] Chỉ trưởng phòng được phép cập nhật và thêm thông tin vào dự án (DAC). (**1412112**)
-* [✓] Giám đốc được phép xem thông tin dự án gồm (mã dự án, tên dự án, kinh phí, tên phòng chủ trì, tên chi nhánh chủ trì, tên trưởng dự án và tổng chi) (DAC). (**1412112**)
+* [x] Viết script tạo cấu trúc cơ sở dữ liệu (**1412112**)
+* [x] Viết script thêm dữ liệu (**1412112**)
+* [x] Tạo tài khoản cho các nhân viên trong bảng Nhân Viên. Tên tài khoản trùng với mã nhân viên. Tạo ít nhất 5 tài khoản cho mỗi vị trí: trưởng dự án, trưởng phòng, trưởng chi nhánh, nhân viên, giám đốc và ít nhất 5 dòng cho các bảng dữ liệu còn lại. (**1412112**)
+* [x] Tạo các role cho các vị trí phù hợp cho công ty. (**1412112**)
+* [x] Chỉ trưởng phòng được phép cập nhật và thêm thông tin vào dự án (DAC). (**1412112**)
+* [x] Giám đốc được phép xem thông tin dự án gồm (mã dự án, tên dự án, kinh phí, tên phòng chủ trì, tên chi nhánh chủ trì, tên trưởng dự án và tổng chi) (DAC). (**1412112**)
 * [ ] Chỉ trưởng phòng, trưởng chi nhánh được cấp quyền thực thi stored procedure cập nhật thông tin phòng ban của mình (DAC). (**MSSV**)
-* [✓] Tất cả nhân viên bình thường (trừ trưởng phòng, trưởng chi nhánh và các trưởng dự án) chỉ được phép xem thông tin nhân viên trong phòng của mình, chỉ được xem lương của bản thân (VPD). (**1412112**)
+* [x] Tất cả nhân viên bình thường (trừ trưởng phòng, trưởng chi nhánh và các trưởng dự án) chỉ được phép xem thông tin nhân viên trong phòng của mình, chỉ được xem lương của bản thân (VPD). (**1412112**)
 * [ ] Trưởng dự án chỉ được phép đọc, ghi thông tin chi tiêu của dự án mình quản lý (VPD). (**MSSV**)
 * [ ] Trưởng phòng chỉ được phép đọc thông tin chi tiêu của dự án trong phòng ban mình quản lý. Với những dự án không thuộc phòng ban của mình, các trưởng phòng được phép xem thông tin chi tiêu nhưng không được phép xem số tiền cụ thể (VPD). (**MSSV**)
 * [ ] Mỗi dự án trong công ty có các mức độ nhạy cảm được đánh dấu bao gồm “Thông thường”, “Giới hạn”, “Bí mật”, “Bí mật cao”. Mỗi dự án có thể thuộc quyền quản lý của tổng công ty hoặc của 1 trong 3 chi nhánh “Tp.Hồ Chí Minh”, “Hà Nội”, “Đà Nẵng”. Mỗi dự án có thể liên quan đến các phòng ban: “Nhân sự”, “Kế toán”, “Kế hoạch” (OLS).
