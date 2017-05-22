@@ -1,0 +1,86 @@
+/* connect as SYSDBA */
+
+-- Tao ham chinh sach selectPhongBan
+create or replace function selectPhongBan
+(
+       p_schema in varchar2 default null,
+       p_object in varchar2 default null
+)
+return varchar2
+as
+phong varchar2(10);
+begin
+       if (exists (select *
+                   from PhongBan, ChiNhanh, DuAn
+                   where user = truongPhong
+                   or user = truongChiNhanh
+                   or user = truongDA))
+       then
+              return '';
+       else
+              select maPhong into phong
+              from NhanVien
+              where user = maNV;
+       return 'maPhong = ' || q'[']' || phong || q'[']';
+       end if;
+end;
+
+-- Gan ham selectPhongBan vao chinh sach policy_nhanVien_phongBan
+begin
+       DBMS_RLS.add_policy
+       (object_schema => 'orcl',
+       object_name => 'NhanVien',
+       policy_name => 'policy_nhanVien_phongBan',
+       function_schema => 'orcl',
+       policy_function => 'selectPhongBan',
+       statement_types => 'select');
+end;
+
+-- Huy ham chinh sach
+begin
+       DBMS_RLS.drop_policy
+       (object_schema => 'orcl',
+       object_name => 'NhanVien',
+       policy_name => 'policy_nhanVien_phongBan');
+end;
+
+-- Tao ham chinh sach selectNhanVien
+create or replace function selectNhanVien
+(
+       p_schema in varchar2 default null,
+       p_object in varchar2 default null
+)
+return varchar2
+as
+begin
+       if (exists (select *
+                   from PhongBan, ChiNhanh, DuAn
+                   where user = truongPhong
+                   or user = truongChiNhanh
+                   or user = truongDA))
+       then
+                   return '';
+       else
+                   return 'user = maNV';
+       end if;
+end;
+
+-- Gan ham selectNhanVien vao chinh sach policy_nhanVien_luong
+begin
+       DBMS_RLS.add_policy
+       (object_schema => 'orcl',
+       object_name => 'NhanVien',
+       policy_name => 'policy_nhanVien_luong',
+       function_schema => 'orcl',
+       policy_function => 'selectNhanVien',
+       sec_relevant_cols=> 'luong',
+       sec_relevant_cols_opt=> DBMS_RLS.all_rows);
+end;
+
+-- Huy ham chinh sach
+begin
+       DBMS_RLS.drop_policy
+       (object_schema => 'orcl',
+       object_name => 'NhanVien',
+       policy_name => 'policy_nhanVien_luong');
+end;
