@@ -1,0 +1,14 @@
+/* connect as SYSDBA */
+
+-- Tao view de Giam doc xem thong tin
+create or replace view viewGiamDoc
+as select da.maDA, da.tenDA, da.kinhPhi, pb.tenPhong phongChuTri, cn.tenCN chiNhanhChuTri, nv.hoTen truongDuAn, sum(ct.soTien) tongChi
+from DuAn da, PhongBan pb, ChiNhanh cn, NhanVien nv, ChiTieu ct
+where da.phongChuTri = pb.maPhong
+      and pb.chiNhanh = cn.maCN
+      and da.truongDA = nv.maNV
+      and da.maDA = ct.Duan
+group by da.maDA, da.tenDA, da.kinhPhi, pb.tenPhong, cn.tenCN, nv.hoTen;
+
+-- Cap quyen xem tren viewGiamDoc cho role GiamDoc
+grant select on viewGiamDoc to GiamDoc
