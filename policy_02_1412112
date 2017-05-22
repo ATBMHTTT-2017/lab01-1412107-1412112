@@ -1,0 +1,74 @@
+/* connect as SYSDBA */
+
+-- Tao role GiamDoc
+create role GiamDoc;
+
+-- Tao role TruongChiNhanh
+create role TruongChiNhanh;
+
+-- Tao role TruongPhong
+create role TruongPhong;
+
+-- Tao role TruongDuAn
+create role TruongDuAn;
+
+-- Tao role NhanVien
+create role NhanVien;
+
+-- Them nhan vien giu vai tro Giam doc vao role GiamDoc
+grant GiamDoc to NV000;
+
+-- Them cac nhan vien giu vai tro Truong chi nhanh vao role TruongChiNhanh
+grant TruongChiNhanh to NV101;
+grant TruongChiNhanh to NV201;
+grant TruongChiNhanh to NV301;
+grant TruongChiNhanh to NV401;
+grant TruongChiNhanh to NV501;
+
+-- Them cac nhan vien giu vai tro Truong phong vao role TruongPhong
+grant TruongPhong to NV102;
+grant TruongPhong to NV104;
+grant TruongPhong to NV106;
+grant TruongPhong to NV202;
+grant TruongPhong to NV204;
+grant TruongPhong to NV206;
+grant TruongPhong to NV302;
+grant TruongPhong to NV304;
+grant TruongPhong to NV306;
+grant TruongPhong to NV402;
+grant TruongPhong to NV404;
+grant TruongPhong to NV406;
+grant TruongPhong to NV502;
+grant TruongPhong to NV504;
+grant TruongPhong to NV506;
+
+-- Them cac nhan vien giu vai tro Truong du an vao role TruongDuAn
+grant TruongDuAn to NV107;
+grant TruongDuAn to NV207;
+grant TruongDuAn to NV307;
+grant TruongDuAn to NV407;
+grant TruongDuAn to NV507;
+
+-- Them cac nhan vien thuong vao role NhanVien
+grant NhanVien to NV103;
+grant NhanVien to NV105;
+grant NhanVien to NV108;
+grant NhanVien to NV203;
+grant NhanVien to NV205;
+grant NhanVien to NV208;
+grant NhanVien to NV303;
+grant NhanVien to NV305;
+grant NhanVien to NV308;
+grant NhanVien to NV403;
+grant NhanVien to NV405;
+grant NhanVien to NV408;
+grant NhanVien to NV503;
+grant NhanVien to NV505;
+grant NhanVien to NV508;
+
+-- Cap quyen tao phien lam viec cho cac role
+grant create session to GiamDoc;
+grant create session to TruongChiNhanh;
+grant create session to TruongPhong;
+grant create session to TruongDuAn;
+grant create session to NhanVien;
