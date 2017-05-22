@@ -1,0 +1,2 @@
+/* connect as SYSDBA */
+grant update, insert on DuAn to TruongPhong;
